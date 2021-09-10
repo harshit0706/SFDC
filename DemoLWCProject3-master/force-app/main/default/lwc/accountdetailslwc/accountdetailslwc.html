@@ -1,0 +1,23 @@
+<template>
+    <template if:true={isVisible}>
+    <lightning-card>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-button label="Create New Account" variant="brand" onclick={createNewAccount} class="slds-float_right"></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="12">
+                <h1 class="slds-text-heading_large slds-text-title_caps slds-text-title_bold">Account Details</h1>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="12">
+                <img src={imgURL} class="slds-align_absolute-center">
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="4">
+                <lightning-input readonly label="Account Name" value={accountName} class="slds-text-title_bold"></lightning-input>
+                <lightning-input readonly label="Domain Name" value={domain} class="slds-text-title_bold"></lightning-input>
+                <lightning-input readonly label="Company Legal Name" value={legalName} class="slds-text-title_bold"></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        <!-- <h1>Year from APP Builder: {year}</h1> -->
+    </lightning-card>
+    </template>
+</template>

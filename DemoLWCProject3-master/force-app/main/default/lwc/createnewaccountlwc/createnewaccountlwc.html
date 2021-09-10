@@ -1,0 +1,17 @@
+<template>
+    <!-- <div>Hello, World!</div> -->
+    <div>Hello, {propWorld}!</div>
+    <div class="name">Name:Updated Account Name</div>
+    <lightning-card>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="4">
+                <c-acountsearchlwc ongetsearchresults={handleSearchResults} onresetsearchresults={handleResetResults}></c-acountsearchlwc>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="8">
+                <lightning-button name="accDetails" disabled label="Get Account Details" variant="brand" onclick={handlegetAccountDetails}></lightning-button>
+                <!-- <lightning-button id="acccDetailsTest" name="accDetailsTest" disabled label="Get Account Details Test" variant="brand"></lightning-button> -->
+                <c-accountsearchresultlwc search-results={searchResultsParent}></c-accountsearchresultlwc>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
